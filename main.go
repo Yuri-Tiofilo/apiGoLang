@@ -57,5 +57,6 @@ func serverConfig() {
 }
 
 func main() {
+	routes()
 	serverConfig()
 }
