@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -52,7 +53,7 @@ func configRoutes() {
 func serverConfig() {
 	configRoutes()
 	fmt.Println("Servidor está rodando")
-	http.ListenAndServe(":3333", nil) //DefaultServerMux
+	log.Fatal(http.ListenAndServe(":3333", nil)) //DefaultServerMux
 }
 
 func main() {
