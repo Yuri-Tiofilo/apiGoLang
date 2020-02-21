@@ -7,7 +7,9 @@ import (
 )
 
 func serverConfig() {
-	// configRoutes()
+	teste := NewRouter()
+	fmt.Println(teste)
+	configRoutes()
 	fmt.Println("Servidor está rodando")
 	log.Fatal(http.ListenAndServe(":3333", nil)) //DefaultServerMux
 }
